@@ -1,0 +1,22 @@
+.home {
+  display: block;
+  border-color: #ccc;
+}
+
+.draftsContainer {
+  padding: .5em;
+}
+
+.draftContainer {
+  width: 100%;
+}
+
+.noDrafts {
+  margin: 3rem auto;
+  width: 70%;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+}
