@@ -2,7 +2,7 @@
   "name": "tinydraft-preact-cli",
   "version": "1.0.0",
   "description": "tinydraft.net ported to Preact with preact-cli.",
-	"repository": "kahlil/tinydraft-preact-cli",
+  "repository": "kahlil/tinydraft-preact-cli",
   "main": "index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
@@ -23,9 +23,11 @@
     "preact-cli": "^1.0.1"
   },
   "dependencies": {
+    "@hoodie/client": "^10.0.2",
     "basscss": "^8.0.3",
     "localforage": "^1.5.0",
     "normalize.css": "^7.0.0",
+    "pouchdb": "^6.2.0",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.2",
