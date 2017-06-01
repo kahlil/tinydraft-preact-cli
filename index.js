@@ -11,15 +11,16 @@ const hoodie = new Hoodie({
   PouchDB: PouchDB
 });
 
-// console.log(PouchDB);
-// hoodie.account.signUp({
-//   username: 'pat@Example.com',
-//   password: 'secret'
-// }).then(function (accountAttributes) {
-//   hoodie.log.info('Signed up as %s', accountAttributes.username)
-// }).catch(function (error) {
-//   hoodie.log.error(error)
-// })
+console.log(hoodie);
+hoodie.account.signUp({
+  username: 'pat@Example.com',
+  password: 'secret'
+})
+.then(function (accountAttributes) {
+  hoodie.log.info('Signed up as %s', accountAttributes.username)
+}).catch(function (error) {
+  hoodie.log.error(error)
+})
 
 // console.log(hoodie)
 
