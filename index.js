@@ -1,28 +1,8 @@
 import './style';
+import './init-hoodie';
 
 import { h } from 'preact';
 import { Router } from 'preact-router';
-
-import Hoodie from '@hoodie/client';
-import PouchDB from 'pouchdb';
-
-const hoodie = new Hoodie({
-  url: 'http://localhost:9999',
-  PouchDB: PouchDB
-});
-
-console.log(hoodie);
-hoodie.account.signUp({
-  username: 'pat@Example.com',
-  password: 'secret'
-})
-.then(function (accountAttributes) {
-  hoodie.log.info('Signed up as %s', accountAttributes.username)
-}).catch(function (error) {
-  hoodie.log.error(error)
-})
-
-// console.log(hoodie)
 
 // import Header from './components/header';
 import Home from './routes/home';

@@ -11,7 +11,7 @@ export default class Draft extends Component {
 					<div class={style.draftText}>
 						{this.props.text}
 					</div>
-					<DraftActions/>
+					<DraftActions />
 				</div>
 			</div>
 		);

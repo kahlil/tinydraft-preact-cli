@@ -1,33 +1,35 @@
 import { h, Component } from 'preact';
+// import { hoodie } from '../../init-hoodie';
 import style from './style';
 import Draft from '../../components/draft';
 import Header from '../../components/header';
 
-const draftsData = [
-	{
-		id: 1,
-		text: 'bla bla'
-	},
-	{
-		id: 2,
-		text: 'blubb blubb'
-	},
-	{
-		id: 3,
-		text: 'für die gang'
-	}
-]
+function DraftList({ drafts }) {
+	console.log(drafts);
+	return drafts.map(draft => <Draft key={draft._id} text={draft.text} />);
+}
 
 export default class Home extends Component {
-	draftList = draftsData.map(d => <Draft key={d.id.toString()} text={d.text} />);
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			drafts: []
+		};
+	}
+
+	componentDidMount() {
+		global.hoodie.store.findAll()
+			.then(docs => this.setState({ drafts: docs }));
+	}
 
 	render() {
 		return (
 			<div class={style.home}>
 				<Header></Header>
 				<div class={style.draftsContainer}>
-					{this.draftList}
-					{draftsData.length == 0 &&
+					<DraftList drafts={this.state.drafts} />
+					{this.state.drafts.length === 0 &&
 						<div class={style.noDrafts}>
 							No drafts yet.
 						</div>
