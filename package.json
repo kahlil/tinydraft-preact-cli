@@ -25,6 +25,7 @@
   "dependencies": {
     "@hoodie/client": "^10.1.0",
     "basscss": "^8.0.3",
+    "decko": "^1.2.0",
     "localforage": "^1.5.0",
     "normalize.css": "^7.0.0",
     "pouchdb": "^6.2.0",
@@ -32,6 +33,7 @@
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.2",
     "snarkdown": "^1.2.2",
+    "typescript": "^2.3.4",
     "xstream": "^10.8.0"
   }
 }

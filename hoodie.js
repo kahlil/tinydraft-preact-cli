@@ -6,7 +6,7 @@ import PouchDB from 'pouchdb';
 // Workaround for a Hoddie dependency.
 global.process = { browser: true }
 
-global.hoodie = new Hoodie({
+export const hoodie = new Hoodie({
   url: 'http://localhost:9999',
   PouchDB: PouchDB
 });

@@ -4,14 +4,14 @@ import style from './style';
 import DraftActions from '../draft-actions';
 
 export default class Draft extends Component {
-	render() {
+	render({ draft }) {
 		return (
-			<div class={style.draft}>
+			<div class={`${style.draft} draft`} data-draft-id={draft._id}>
 				<div class={style.innerContainer}>
 					<div class={style.draftText}>
-						{this.props.text}
+						{draft.text}
 					</div>
-					<DraftActions />
+					<DraftActions draftId={draft._id} />
 				</div>
 			</div>
 		);
